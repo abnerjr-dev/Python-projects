@@ -32,6 +32,13 @@ class Snake:
             snake[i].goto(x, y)
         snake[0].forward(DISTANCE)
 
+    def reset(self):
+        for piece in self.snake_pieces:
+            piece.reset()
+        self.snake_pieces.clear()
+        self.create_snake()
+        self.head = self.snake_pieces[0]
+
     def up(self):
         if self.head.heading() != 270:
             self.head.setheading(90)

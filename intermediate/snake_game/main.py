@@ -42,13 +42,15 @@ while game_on:
         or snake.head.ycor() > int((height) / 2 - 20)
         or snake.head.ycor() < -int((height) / 2 - 20)
     ):
-        game_on = False
-        scoreboard.game_over()
+        # game_on = False
+        scoreboard.reset()
+        snake.reset()
 
     for piece in snake.snake_pieces[1:]:
         if snake.head.distance(piece) < 10:
-            game_on = False
-            scoreboard.game_over()
+            # game_on = False
+            scoreboard.reset()
+            snake.reset()
 
 
 screen.exitonclick()

@@ -5,7 +5,7 @@ import random as r
 class Food(t.Turtle):
     def __init__(self):
         super().__init__()
-        self.shape("circle")
+        self.shape("turtle")
         self.shapesize(0.8, 0.8)
         self.color("red")
         self.speed(0)
